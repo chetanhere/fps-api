@@ -1,0 +1,25 @@
+{
+    "group1":{
+        "name": "Group 1",
+        "manager":"Sawan 1",
+        "villages":["Temla","Ubdi","Nandgaon (Bagud)","Akavalya","Rampura","Rajur",
+            "Singun","Mothapura","Likkhi", "Dongargaon","Aghawan (Wanya)","Pandhaniya",
+            "Dehri", "Chhoti Chhalpa","Ramangaon", "Other1"]
+        
+    },
+    "group2":{
+        "name": "Group 2",
+        "manager":"Sawan 2",
+        "villages":["Mangrul", "Khedi (Khurd)", "Bhawarkachchh","Bamkhal","Barsalay", "Raipura","Sonkhedi",
+            "Lohari", "Aghawan (Khedi)", "Khedi (Aghawan)", "Jaljyoti","Chhalpa","Temarni", "Gopalpura",
+            "Asangaon", "Mengaon", "Nimgul", "Mathray", "Gol", "Balyapur", "Selani", "Other2"]
+        
+    },
+    "group3":{
+        "name": "Group 3",
+        "manager":"Sachin",
+        "villages":["Pipari", "Gandhawad", "Kamodwada", "Ghotya", "Dalka", "Gavasan", "Barud", "Ichchhapur", "Banihar",
+            "Nandgaon (Road)", "Surpala", "Dabad", "Gawla", "Un", "Sinkheda", "Other 3"]
+        
+    }
+}
