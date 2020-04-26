@@ -7,9 +7,9 @@ const fs = require('fs')
 
 const db = mysql.createConnection({
     host: 'localhost',
-    user:'root',
-    password:'abc@1234',
-    database: 'fpsdb'
+    user:'',
+    password:'',
+    database: ''
 });
 
 let rawdata = fs.readFileSync('village.json');
