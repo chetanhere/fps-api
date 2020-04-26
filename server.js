@@ -7,9 +7,9 @@ const fs = require('fs')
 
 const db = mysql.createConnection({
     host: 'localhost',
-    user:'<username>',
-    password:'<password>',
-    database: '<db name>'
+    user:'root',
+    password:'abc@1234',
+    database: 'fpsdb'
 });
 
 let rawdata = fs.readFileSync('village.json');
@@ -51,7 +51,8 @@ app.put('/products/:id', (req, res)=>{
     console.log(req.params.id, req.body.product_price);
     //res.statusCode(200);
     product_price = req.body.product_price;
-    current_price = 0;
+    //console.log(product_price);
+    //current_price = 0;
     sql = `INSERT INTO price_history (product_id, previous_price) SELECT product_id, product_price FROM products WHERE product_id=${req.params.id}`;
     db.query(sql, (err, results)=>{
         if (err){
@@ -83,7 +84,8 @@ app.post('/users', (req, res)=>{
         last_name: req.body.last_name,
         father_name: req.body.father_name,
         village: req.body.village,
-        mobile: req.body.mobile
+        mobile: req.body.mobile,
+        village_group: req.body.village_group
     }
     let sql = 'INSERT INTO users SET ?';
     db.query(sql, data, (err, results)=>{
@@ -103,7 +105,7 @@ app.post('/users', (req, res)=>{
 
 app.post('/login/:mobile', (req, res)=>{
     mobile = req.params.mobile;
-    sql = `SELECT user_id FROM users WHERE mobile=${mobile}`;
+    sql = `SELECT * FROM users WHERE mobile=${mobile}`;
     db.query(sql, (err, results)=>{
         if(err){
             throw err
